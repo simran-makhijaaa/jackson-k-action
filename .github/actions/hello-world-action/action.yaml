@@ -6,3 +6,10 @@ jobs:
       - uses: actions/checkout@v3
       # This step references the directory that contains the action.
       - uses: ./.github/actions/hello-world-action
+      
+      
+ jobs:
+  my_first_job:
+    steps:
+      - name: My first step
+        uses: actions/setup-node@v3
