@@ -2,18 +2,17 @@ name : helloaction
 run-name: ${{ github.actor }} hello action
 on: [push]
 jobs:
-  build:
+#  my_first_job:
+#    steps:
+#      - name: My first step
+#        uses: actions/setup-node@v3
+#        uses: docker://alpine:3.8
+  check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      # This step checks out a copy of your repository.
       - uses: actions/checkout@v3
-      # This step references the directory that contains the action.
-      - uses: ./.github/actions/hello-world-action
-      
-      
- jobs:
-  my_first_job:
-    steps:
-      - name: My first step
-        uses: actions/setup-node@v3
-        uses: docker://alpine:3.8
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v
