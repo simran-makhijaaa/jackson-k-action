@@ -13,3 +13,4 @@ jobs:
     steps:
       - name: My first step
         uses: actions/setup-node@v3
+        uses: docker://alpine:3.8
