@@ -1,4 +1,6 @@
 name : helloaction
+run-name: ${{ github.actor }} hello action
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
