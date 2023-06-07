@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # This step references the directory that contains the action.
-      - uses: ./.github/actions/hello-world-action
+      - uses: ./.github/actions/hello-world-action/action.yaml
 # - name: Cache
  # uses: actions/cache@v1.2.1
   #with:
